@@ -8,7 +8,7 @@ source("02_codigo/00_paquetes_setup_tema.R")
 # Fuente: elaboración propia a partir de información publicada por Flight Aware: https://flightaware.com/live/airport/MMSM
 
 bd_aifa_fa <- 
-  read_csv(file = "01_datos/a_partir_de_flight_aware/bd_operaciones_aifa_corte_20220911.csv")
+  read_csv(file = "01_datos/a_partir_de_flight_aware/bd_operaciones_aifa_corte_20221128.csv")
 
 ## Estadística operacional regular por origen-destino ----
 
@@ -20,27 +20,27 @@ bd_aifa_fa <-
 
 # Número de vuelos nacionales
 bd_orig_dest_nal_vuelos_w <- 
-  read_excel("01_datos/afac/sase-julio-2022-26082022.xlsx", 
+  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx", 
              sheet = 2, 
-             range = "a6:n474") %>% 
+             range = "a6:n504") %>% 
   clean_names() %>% 
   mutate(tipo = "Nacionales - Serv. regular") 
 
 
 # Número de pasajeros nacionales
 bd_orig_dest_nal_pasajeros_w <- 
-  read_excel("01_datos/afac/sase-julio-2022-26082022.xlsx", 
+  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx", 
              sheet = 2, 
-             range = "a6:aa474") %>% 
+             range = "a6:aa504") %>% 
   clean_names() %>% 
   select(-c(ene_jan_3:total)) %>% 
   mutate(tipo = "Nacionales - Serv. regular") 
 
 # Número de vuelos de carga
 bd_orig_dest_nal_carga_w <- 
-  read_excel("01_datos/afac/sase-julio-2022-26082022.xlsx", 
+  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx", 
              sheet = 2, 
-             range = "a6:an474") %>% 
+             range = "a6:an504") %>% 
   clean_names() %>%
   select(-c(ene_jan_3:total_28)) %>%
   mutate(tipo = "Nacionales - Serv. regular") 
@@ -49,27 +49,27 @@ bd_orig_dest_nal_carga_w <-
 
 # Número de vuelos internacionales
 bd_orig_dest_intl_vuelos_w <- 
-  read_excel("01_datos/afac/sase-julio-2022-26082022.xlsx", 
+  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx",
              sheet = 3, 
-             range = "a6:p824") %>% 
+             range = "a6:p845") %>% 
   clean_names() %>% 
   mutate(tipo = "Internacionales - Serv. regular") 
 
 
 # Número de pasajeros internacionales
 bd_orig_dest_intl_pasajeros_w <- 
-  read_excel("01_datos/afac/sase-julio-2022-26082022.xlsx", 
+  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx",
              sheet = 3, 
-             range = "a6:ac824") %>% 
+             range = "a6:ac845") %>% 
   clean_names() %>% 
   select(-c(ene_jan_5:total)) %>% 
   mutate(tipo = "Internacionales - Serv. regular") 
 
 # Número de vuelos de carga internacionales
 bd_orig_dest_intl_carga_w <- 
-  read_excel("01_datos/afac/sase-julio-2022-26082022.xlsx", 
+  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx",
              sheet = 3, 
-             range = "a6:ap824") %>% 
+             range = "a6:ap845") %>% 
   clean_names() %>%
   select(-c(ene_jan_5:total_30)) %>%
   mutate(tipo = "Internacionales - Serv. regular") 
@@ -78,27 +78,11 @@ bd_orig_dest_intl_carga_w <-
 
 
 ## Capacidad de aeronaves que operan desde/hacia el AIFA ----
+
+# Fuentes: Los datos de las aeronaves utilzidas los obtuve de FlightAware y los de la capacidad de cada una de Seat Guru
+
 bd_capacidad_aifa <- 
-  tribble(
-    ~`origen`, ~`destino`, ~`compañia`, ~`tipo_avion`, ~`capacidad`, ~`fuente`,
-    "AIFA",   "Cancún",   "Volaris",        "A320",    174, "https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php",
-    "AIFA",   "Tijuana",  "Volaris",     "A320neo",    186, "https://www.seatguru.com/airlines/Volaris/Volaris_Airbus_A320neo.php",
-    "AIFA",   "Monterrey",  "Viva Aerobus", "A320",    180, "https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php",
-    "AIFA",   "Guadalajara",  "Viva Aerobus", "A320",    180, "https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php",
-    "AIFA",   "Cancún",  "Viva Aerobus", "A320",    180, "https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php",
-    "AIFA",   "Mérida",  "Aeroméxico", "E190",    99, "https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php",
-    "AIFA",   "Villahermosa",  "Aeroméxico", "E190",    99, "https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php",
-    "AIFA",   "Pto. Vallarta",  "Aeroméxico", "E190",    99, "https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php",
-    
-    "Cancún",   "AIFA",   "Volaris",        "A320",    174, "https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php",
-    "Tijuana",   "AIFA",  "Volaris",     "A320neo",    186, "https://www.seatguru.com/airlines/Volaris/Volaris_Airbus_A320neo.php",
-    "Monterrey",   "AIFA",  "Viva Aerobus", "A320",    180, "https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php",
-    "Guadalajara", "AIFA",  "Viva Aerobus", "A320",    180, "https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php",
-    "Cancún",  "AIFA", "Viva Aerobus", "A320",    180, "https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php",
-    "Mérida",   "AIFA",     "Aeroméxico", "E190",    99, "https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php",
-    "Villahermosa", "AIFA",   "Aeroméxico", "E190",    99, "https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php",
-    "Pto. Vallarta", "AIFA", "Aeroméxico", "E190",    99, "https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php"
-  )
+  read_csv(file = "01_datos/bd_capacidad_aviones_aifa.csv")
 
 
 ## Capacidad de aeronaves que operan desde/hacia el Aeropuerto Internacional de Toluca (AIT) ----
@@ -372,8 +356,10 @@ bd_orig_dest_intl <-
 # Calcular la capacidad promedio de los aviones que operan, tanto en general como en cada ruta desde/hacia el AIFA ---
 bd_capacidad_aifa_media_ruta <- 
   bd_capacidad_aifa %>% 
+  group_by(mes, mes_numero) %>% 
   mutate(capacidad_media_gral = mean(capacidad)) %>% 
-  group_by(origen, destino) %>% 
+  ungroup() %>% 
+  group_by(mes, mes_numero, origen, destino) %>% 
   summarise(capacidad_media_gral = first(capacidad_media_gral), 
             capacidad_media_ruta = mean(capacidad)) %>% 
   ungroup()
@@ -407,7 +393,7 @@ bd_aifa_salidas <-
   mutate(tipo = "Salidas") %>% 
   # Unir datos de capacidad media de aeronaves usadas en operaciones desde/hacia este aeropuerto en cada ruta
   left_join(bd_capacidad_aifa_media_ruta, 
-            by = c("origen", "destino")) %>% 
+            by = c("mes", "mes_numero", "origen", "destino")) %>% 
   # Seleccionar, renombrar y reordenar columnas
   select(aeropuerto = destino, everything(), -c(origen, contains("pais_")))
 
@@ -420,7 +406,7 @@ bd_aifa_llegadas <-
   mutate(tipo = "Llegadas") %>% 
   # Unir datos de capacidad media de aeronaves usadas en operaciones desde/hacia este aeropuerto en cada ruta
   left_join(bd_capacidad_aifa_media_ruta, 
-            by = c("origen", "destino")) %>% 
+            by = c("mes", "mes_numero", "origen", "destino")) %>% 
   # Seleccionar, renombrar y reordenar columnas
   select(aeropuerto = origen, everything(), -c(destino, contains("pais_")))
 
@@ -428,28 +414,6 @@ bd_aifa_llegadas <-
 bd_aifa <- 
   bd_aifa_salidas %>% 
   bind_rows(bd_aifa_llegadas)
-
-# Ajustar valor de capacidad media para algunos meses ----
-
-# Esto es necesario porque el número compañías aéreas que operan cada ruta desde/hacia el AIFA cambia a lo largo del tiempo
-
-# Valores que deben ajustarse:
-
-# De marzo a junio la capacidad media de la ruta AIFA - Cancún debe ser 174 porque sólo Volaris la operó en estos meses
-
-# De marzo a julio la capacidad media de la ruta AIFA - Guadalajara debe ser 180 porque sólo Viva Aerobus la operó en estos meses
-
-# De marzo a julio la capacidad media de la ruta AIFA - Mérida debe ser 99 porque sólo Aeroméxico la operó en estos meses
-
-# De marzo a julio la capacidad media de la ruta AIFA - Monterrey debe ser 180 porque sólo Viva Aerobus la operó en estos meses
-
-bd_aifa <- 
-  bd_aifa %>% 
-  mutate(capacidad_media_ruta = case_when(aeropuerto == "Cancún" & mes_numero < 7 ~ 174, 
-                                     aeropuerto == "Guadalajara" & mes_numero < 8 ~ 180, 
-                                     aeropuerto == "Mérida" & mes_numero < 8 ~ 99,
-                                     aeropuerto == "Guadalajara" & mes_numero < 8 ~ 180, 
-                                     T ~ capacidad_media_ruta))
 
 
 ### Genera tibble con info exclusiva del AIT ----
@@ -485,7 +449,7 @@ bd_ait_llegadas <-
   select(aeropuerto = origen, everything(), -c(destino, contains("pais_")))
 
 
-# Unir datos de sañidas y llegadas del AIT
+# Unir datos de salidas y llegadas del AIT
 bd_ait <- 
   bd_ait_salidas %>% 
   bind_rows(bd_ait_llegadas)
@@ -494,7 +458,8 @@ bd_ait <-
 ### Calcular estadísticas descriptivas agregadas para el AIFA ----
 resumen_mes_aifa <- 
   bd_aifa %>% 
-  group_by(mes) %>% 
+  filter(!is.na(capacidad_media_gral)) %>% 
+  group_by(mes, mes_numero) %>% 
   summarise(n_vuelos_mes = sum(n_vuelos),
             n_pasajeros_mes = sum(n_pasajeros),
             capacidad_media_gral = mean(capacidad_media_gral)) %>% 
@@ -504,13 +469,18 @@ resumen_mes_aifa <-
                                           mes == "Abril" ~ 153,
                                           mes == "Mayo" ~ 145.3,
                                           mes == "Junio" ~ 145.3,
+                                          mes == "Julio" ~ 149.6,
+                                          mes == "Agosto" ~  142.6,
                                           T ~ capacidad_media_gral),
          # Construir variable que indica el número de días que operó el aeropuerto como terminal de vuelos comerciales en el respectivo mes 
          dias_operacion = case_when(mes == "Marzo" ~ 11,
                                     mes == "Abril" ~ 30,
                                     mes == "Mayo" ~ 31,
                                     mes == "Junio" ~ 30,
-                                    mes == "Julio" ~ 31),
+                                    mes == "Julio" ~ 31,
+                                    mes == "Agosto" ~ 31,
+                                    mes == "Septiembre" ~ 30,
+                                    mes == "Octubre" ~ 31),
          # Promedio de vuelos operados cada día
          n_vuelos_x_dia = n_vuelos_mes/dias_operacion,
          # Promedio de pasajeros atendidos cada día
@@ -520,6 +490,7 @@ resumen_mes_aifa <-
          # Promedio de ocupacion 
          media_ocupacion_mes = media_pasajeros_x_vuelo_mes/capacidad_media_gral*100) %>% 
   filter(!is.na(dias_operacion)) %>% 
+  arrange(mes_numero) %>% 
   as.data.frame()
 
 
@@ -534,7 +505,10 @@ resumen_mes_ait <-
   # Corregir capacidad media para meses previos. Esto es necesario porque el número de rutas y compañías aéreas que han operado en cada una ha cambiado con el paso del tiempo
   mutate(capacidad_media_gral = case_when(T ~ capacidad_media_gral),
          # Construir variable que indica el número de días que operó el aeropuerto como terminal de vuelos comerciales en el respectivo mes 
-         dias_operacion = case_when(mes == "Julio" ~ 31),
+         dias_operacion = case_when(mes == "Julio" ~ 31,
+                                    mes == "Agosto" ~ 31,
+                                    mes == "Septiembre" ~ 30,
+                                    ),
          # Promedio de vuelos operados cada día
          n_vuelos_x_dia = n_vuelos_mes/dias_operacion,
          # Promedio de pasajeros atendidos cada día
@@ -569,7 +543,7 @@ lista_destino <-
 bd_salidas_todos <- 
   bd_orig_dest %>% 
   filter(origen %in% lista_origen, 
-         mes_numero < 8) %>% 
+         mes_numero < 11) %>% 
   mutate(tipo = "Salidas") %>% 
   rename(apto_interes = origen,
          apto_ruta = destino)
@@ -577,7 +551,7 @@ bd_salidas_todos <-
 bd_llegadas_todos <- 
   bd_orig_dest %>% 
   filter(destino %in% lista_destino,
-         mes_numero < 8) %>% 
+         mes_numero < 11) %>% 
   mutate(tipo = "Llegadas") %>% 
   rename(apto_ruta = origen,
          apto_interes = destino)
@@ -592,7 +566,7 @@ bd_operaciones_todos <-
 bd_salidas_sam <- 
   bd_orig_dest %>% 
   filter(origen %in% c("AIFA", "AICM", "Toluca"),
-         mes_numero < 8) %>% 
+         mes_numero < month(Sys.Date())) %>% 
   mutate(tipo = "Salidas") %>% 
   rename(apto_interes = origen,
          apto_ruta = destino)
@@ -600,7 +574,7 @@ bd_salidas_sam <-
 bd_llegadas_sam <- 
   bd_orig_dest %>% 
   filter(destino %in% c("AIFA", "AICM", "Toluca"),
-         mes_numero < 8) %>% 
+         mes_numero < month(Sys.Date())) %>% 
   mutate(tipo = "Llegadas") %>% 
   rename(apto_ruta = origen,
          apto_interes = destino)
