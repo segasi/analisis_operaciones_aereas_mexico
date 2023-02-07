@@ -4,4 +4,4 @@ Este repo contiene los datos, código, gráficas y documentos que usé a partir 
 
 En el texto propongo y analizo diversas métricas para tratar de entender cómo evolucionan las operaciones y el número de pasajeros atendidos por diversos aeropuertos mexicanos. 
 
-![My image](https://github.com/segasi/analisis_operaciones_aereas_mexico/blob/main/03_vis/promedio_diario_operaciones_y_pasajeros_x_aeropuerto_ultimo_mes_20220911.png)
+![My image](https://github.com/segasi/analisis_operaciones_aereas_mexico/blob/main/03_vis/promedio_diario_operaciones_y_pasajeros_x_aeropuerto_ultimo_mes_.png)
