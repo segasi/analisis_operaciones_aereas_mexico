@@ -8,39 +8,39 @@ source("02_codigo/00_paquetes_setup_tema.R")
 # Fuente: elaboración propia a partir de información publicada por Flight Aware: https://flightaware.com/live/airport/MMSM
 
 bd_aifa_fa <- 
-  read_csv(file = "01_datos/a_partir_de_flight_aware/bd_operaciones_aifa_corte_20221128.csv")
+  read_csv(file = "01_datos/a_partir_de_flight_aware/bd_operaciones_aifa_corte_20230205.csv")
 
 ## Estadística operacional regular por origen-destino ----
 
 # Fuente: https://www.gob.mx/afac/acciones-y-programas/estadisticas-280404/
 
-# Nota: Sólo considero los datos de operaciones nacionales e internaciones de servicio regular o programado
+# Nota: Sólo considero los datos de operaciones nacionales e internacionales de servicio regular o programado
 
 # Vuelos nacionales ----
 
 # Número de vuelos nacionales
 bd_orig_dest_nal_vuelos_w <- 
-  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx", 
+  read_excel("01_datos/afac/sase-diciembre-2022-26012023.xlsx", 
              sheet = 2, 
-             range = "a6:n504") %>% 
+             range = "a6:n513") %>% 
   clean_names() %>% 
   mutate(tipo = "Nacionales - Serv. regular") 
 
 
 # Número de pasajeros nacionales
 bd_orig_dest_nal_pasajeros_w <- 
-  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx", 
+  read_excel("01_datos/afac/sase-diciembre-2022-26012023.xlsx", 
              sheet = 2, 
-             range = "a6:aa504") %>% 
+             range = "a6:aa513") %>% 
   clean_names() %>% 
   select(-c(ene_jan_3:total)) %>% 
   mutate(tipo = "Nacionales - Serv. regular") 
 
 # Número de vuelos de carga
 bd_orig_dest_nal_carga_w <- 
-  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx", 
+  read_excel("01_datos/afac/sase-diciembre-2022-26012023.xlsx", 
              sheet = 2, 
-             range = "a6:an504") %>% 
+             range = "a6:an513") %>% 
   clean_names() %>%
   select(-c(ene_jan_3:total_28)) %>%
   mutate(tipo = "Nacionales - Serv. regular") 
@@ -49,27 +49,27 @@ bd_orig_dest_nal_carga_w <-
 
 # Número de vuelos internacionales
 bd_orig_dest_intl_vuelos_w <- 
-  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx",
+  read_excel("01_datos/afac/sase-diciembre-2022-26012023.xlsx",
              sheet = 3, 
-             range = "a6:p845") %>% 
+             range = "a6:p869") %>% 
   clean_names() %>% 
   mutate(tipo = "Internacionales - Serv. regular") 
 
 
 # Número de pasajeros internacionales
 bd_orig_dest_intl_pasajeros_w <- 
-  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx",
+  read_excel("01_datos/afac/sase-diciembre-2022-26012023.xlsx",
              sheet = 3, 
-             range = "a6:ac845") %>% 
+             range = "a6:ac869") %>% 
   clean_names() %>% 
   select(-c(ene_jan_5:total)) %>% 
   mutate(tipo = "Internacionales - Serv. regular") 
 
 # Número de vuelos de carga internacionales
 bd_orig_dest_intl_carga_w <- 
-  read_excel("01_datos/afac/sase-octubre-2022-25112022.xlsx",
+  read_excel("01_datos/afac/sase-diciembre-2022-26012023.xlsx",
              sheet = 3, 
-             range = "a6:ap845") %>% 
+             range = "a6:ap869") %>% 
   clean_names() %>%
   select(-c(ene_jan_5:total_30)) %>%
   mutate(tipo = "Internacionales - Serv. regular") 
@@ -480,7 +480,9 @@ resumen_mes_aifa <-
                                     mes == "Julio" ~ 31,
                                     mes == "Agosto" ~ 31,
                                     mes == "Septiembre" ~ 30,
-                                    mes == "Octubre" ~ 31),
+                                    mes == "Octubre" ~ 31,
+                                    mes == "Noviembre" ~ 30,
+                                    mes == "Diciembre" ~ 31),
          # Promedio de vuelos operados cada día
          n_vuelos_x_dia = n_vuelos_mes/dias_operacion,
          # Promedio de pasajeros atendidos cada día
@@ -543,7 +545,7 @@ lista_destino <-
 bd_salidas_todos <- 
   bd_orig_dest %>% 
   filter(origen %in% lista_origen, 
-         mes_numero < 11) %>% 
+         mes_numero < 13) %>% 
   mutate(tipo = "Salidas") %>% 
   rename(apto_interes = origen,
          apto_ruta = destino)
@@ -551,7 +553,7 @@ bd_salidas_todos <-
 bd_llegadas_todos <- 
   bd_orig_dest %>% 
   filter(destino %in% lista_destino,
-         mes_numero < 11) %>% 
+         mes_numero < 13) %>% 
   mutate(tipo = "Llegadas") %>% 
   rename(apto_ruta = origen,
          apto_interes = destino)
