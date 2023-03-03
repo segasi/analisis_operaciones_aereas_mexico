@@ -9,6 +9,7 @@ año,mes,mes_numero,tipo,origen,destino,compañia,tipo_avion,capacidad,fuente
 2022,Octubre,10,Salida,AIFA,Mérida,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Salida,AIFA,Mérida,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Salida,AIFA,Mérida,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Salida,AIFA,Mérida,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Marzo,3,Salida,AIFA,Villahermosa,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Abril,4,Salida,AIFA,Villahermosa,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Mayo,5,Salida,AIFA,Villahermosa,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
@@ -23,33 +24,40 @@ año,mes,mes_numero,tipo,origen,destino,compañia,tipo_avion,capacidad,fuente
 2022,Octubre,10,Salida,AIFA,Pto. Vallarta,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Salida,AIFA,Pto. Vallarta,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Salida,AIFA,Pto. Vallarta,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Salida,AIFA,Pto. Vallarta,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Agosto,8,Salida,AIFA,Acapulco,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Septiembre,9,Salida,AIFA,Acapulco,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Salida,AIFA,Acapulco,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Salida,AIFA,Acapulco,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Salida,AIFA,Acapulco,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Salida,AIFA,Acapulco,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Agosto,8,Salida,AIFA,Guadalajara,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Septiembre,9,Salida,AIFA,Guadalajara,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Salida,AIFA,Guadalajara,Aeroméxico,"E190, B738 1 y B738 2",148.3333,"https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php, https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php"
 2022,Noviembre,11,Salida,AIFA,Guadalajara,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
 2022,Diciembre,12,Salida,AIFA,Guadalajara,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
+2023,Enero,1,Salida,AIFA,Guadalajara,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
 2022,Agosto,8,Salida,AIFA,Monterrey,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Septiembre,9,Salida,AIFA,Monterrey,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Salida,AIFA,Monterrey,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Salida,AIFA,Monterrey,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Salida,AIFA,Monterrey,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Salida,AIFA,Monterrey,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Agosto,8,Salida,AIFA,Oaxaca,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Septiembre,9,Salida,AIFA,Oaxaca,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Salida,AIFA,Oaxaca,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Salida,AIFA,Oaxaca,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Salida,AIFA,Oaxaca,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Salida,AIFA,Oaxaca,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Septiembre,9,Salida,AIFA,Veracruz,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Salida,AIFA,Veracruz,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Salida,AIFA,Veracruz,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Salida,AIFA,Veracruz,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Salida,AIFA,Veracruz,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Salida,AIFA,Cancún,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
 2022,Noviembre,11,Salida,AIFA,Cancún,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
 2022,Diciembre,12,Salida,AIFA,Cancún,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
+2023,Enero,1,Salida,AIFA,Cancún,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
 2022,Marzo,3,Llegada,Mérida,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Abril,4,Llegada,Mérida,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Mayo,5,Llegada,Mérida,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
@@ -60,6 +68,7 @@ año,mes,mes_numero,tipo,origen,destino,compañia,tipo_avion,capacidad,fuente
 2022,Octubre,10,Llegada,Mérida,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Llegada,Mérida,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Llegada,Mérida,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Llegada,Mérida,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Marzo,3,Llegada,Villahermosa,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Abril,4,Llegada,Villahermosa,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Mayo,5,Llegada,Villahermosa,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
@@ -74,33 +83,40 @@ año,mes,mes_numero,tipo,origen,destino,compañia,tipo_avion,capacidad,fuente
 2022,Octubre,10,Llegada,Pto. Vallarta,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Llegada,Pto. Vallarta,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Llegada,Pto. Vallarta,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Llegada,Pto. Vallarta,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Agosto,8,Llegada,Acapulco,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Septiembre,9,Llegada,Acapulco,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Llegada,Acapulco,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Llegada,Acapulco,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Llegada,Acapulco,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Llegada,Acapulco,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Agosto,8,Llegada,Guadalajara,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Septiembre,9,Llegada,Guadalajara,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Llegada,Guadalajara,AIFA,Aeroméxico,"E190, B738 1 y B738 2",148.3333,"https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php, https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php"
 2022,Noviembre,11,Llegada,Guadalajara,AIFA,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
 2022,Diciembre,12,Llegada,Guadalajara,AIFA,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
+2023,Enero,1,Llegada,Guadalajara,AIFA,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
 2022,Agosto,8,Llegada,Monterrey,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Septiembre,9,Llegada,Monterrey,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Llegada,Monterrey,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Llegada,Monterrey,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Llegada,Monterrey,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Llegada,Monterrey,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Agosto,8,Llegada,Oaxaca,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Septiembre,9,Llegada,Oaxaca,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Llegada,Oaxaca,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Llegada,Oaxaca,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Llegada,Oaxaca,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Llegada,Oaxaca,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Septiembre,9,Llegada,Veracruz,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Llegada,Veracruz,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Noviembre,11,Llegada,Veracruz,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Diciembre,12,Llegada,Veracruz,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
+2023,Enero,1,Llegada,Veracruz,AIFA,Aeroméxico,E190,99,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Embraer_ERJ-190.php
 2022,Octubre,10,Llegada,Cancún,AIFA,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
 2022,Noviembre,11,Llegada,Cancún,AIFA,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
 2022,Diciembre,12,Llegada,Cancún,AIFA,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
+2023,Enero,1,Llegada,Cancún,AIFA,Aeroméxico,B738 1 y B738 2,173,https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_B.php y https://www.seatguru.com/airlines/AeroMexico/AeroMexico_Boeing_737-800_C.php
 2022,Marzo,3,Salida,AIFA,Guadalajara,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Abril,4,Salida,AIFA,Guadalajara,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Mayo,5,Salida,AIFA,Guadalajara,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
@@ -120,26 +136,33 @@ año,mes,mes_numero,tipo,origen,destino,compañia,tipo_avion,capacidad,fuente
 2022,Octubre,10,Salida,AIFA,Monterrey,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Monterrey,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Salida,AIFA,Monterrey,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
+2023,Enero,1,Salida,AIFA,Monterrey,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
 2022,Julio,7,Salida,AIFA,Cancún,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Agosto,8,Salida,AIFA,Cancún,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Cancún,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Cancún,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Cancún,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Salida,AIFA,Cancún,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Cancún,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Acapulco,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Acapulco,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Acapulco,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
 2022,Diciembre,12,Salida,AIFA,Acapulco,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
+2023,Enero,1,Salida,AIFA,Acapulco,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
 2022,Septiembre,9,Salida,AIFA,Oaxaca,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Oaxaca,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Oaxaca,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
 2022,Diciembre,12,Salida,AIFA,Oaxaca,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
+2023,Enero,1,Salida,AIFA,Oaxaca,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
 2022,Septiembre,9,Salida,AIFA,Pto. Escondido,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Pto. Escondido,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Pto. Escondido,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Salida,AIFA,Pto. Escondido,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Pto. Escondido,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Salida,AIFA,Tijuana,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Tijuana,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Salida,AIFA,La Habana,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,La Habana,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Marzo,3,Llegada,Guadalajara,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Abril,4,Llegada,Guadalajara,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Mayo,5,Llegada,Guadalajara,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
@@ -159,26 +182,33 @@ año,mes,mes_numero,tipo,origen,destino,compañia,tipo_avion,capacidad,fuente
 2022,Octubre,10,Llegada,Monterrey,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Monterrey,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Monterrey,AIFA,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
+2023,Enero,1,Llegada,Monterrey,AIFA,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
 2022,Julio,7,Llegada,Cancún,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Agosto,8,Llegada,Cancún,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,Cancún,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Cancún,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Cancún,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Cancún,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Cancún,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,Acapulco,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Acapulco,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Acapulco,AIFA,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
 2022,Diciembre,12,Llegada,Acapulco,AIFA,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
+2023,Enero,1,Llegada,Acapulco,AIFA,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
 2022,Septiembre,9,Llegada,Oaxaca,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Oaxaca,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Oaxaca,AIFA,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
 2022,Diciembre,12,Llegada,Oaxaca,AIFA,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
+2023,Enero,1,Llegada,Oaxaca,AIFA,Viva Aerobus,A320 y A321,183.5,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php y https://www.seatguru.com/airlines/American_Airlines/American_Airlines_Airbus_A321_V3.php
 2022,Septiembre,9,Llegada,Pto. Escondido,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Pto. Escondido,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Pto. Escondido,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Pto. Escondido,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Pto. Escondido,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Tijuana,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Tijuana,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,La Habana,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,La Habana,AIFA,Viva Aerobus,A320,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Marzo,3,Salida,AIFA,Cancún,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Abril,4,Salida,AIFA,Cancún,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Mayo,5,Salida,AIFA,Cancún,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
@@ -188,7 +218,8 @@ año,mes,mes_numero,tipo,origen,destino,compañia,tipo_avion,capacidad,fuente
 2022,Septiembre,9,Salida,AIFA,Cancún,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Cancún,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Cancún,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
-2023,Diciembre,12,Salida,AIFA,Cancún,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
+2022,Diciembre,12,Salida,AIFA,Cancún,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Cancún,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Marzo,3,Salida,AIFA,Tijuana,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airbus_A320neo.php
 2022,Abril,4,Salida,AIFA,Tijuana,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airbus_A320neo.php
 2022,Mayo,5,Salida,AIFA,Tijuana,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airbus_A320neo.php
@@ -198,46 +229,56 @@ año,mes,mes_numero,tipo,origen,destino,compañia,tipo_avion,capacidad,fuente
 2022,Septiembre,9,Salida,AIFA,Tijuana,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Tijuana,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Tijuana,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
-2023,Diciembre,12,Salida,AIFA,Tijuana,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
+2022,Diciembre,12,Salida,AIFA,Tijuana,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Tijuana,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Agosto,8,Salida,AIFA,Huatulco,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Huatulco,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Huatulco,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Huatulco,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
-2023,Diciembre,12,Salida,AIFA,Huatulco,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
+2022,Diciembre,12,Salida,AIFA,Huatulco,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Huatulco,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Agosto,8,Salida,AIFA,Mérida,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Mérida,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Mérida,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Mérida,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Diciembre,12,Salida,AIFA,Mérida,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Mérida,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Agosto,8,Salida,AIFA,Mexicali,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Mexicali,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Mexicali,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Mexicali,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
-2023,Diciembre,12,Salida,AIFA,Mexicali,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
+2022,Diciembre,12,Salida,AIFA,Mexicali,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Mexicali,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Volaris/Volaris_Airlines_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Guadalajara,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Guadalajara,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Guadalajara,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
-2023,Diciembre,12,Salida,AIFA,Guadalajara,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2022,Diciembre,12,Salida,AIFA,Guadalajara,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Guadalajara,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Pto. Vallarta,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Pto. Vallarta,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Pto. Vallarta,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
-2023,Diciembre,12,Salida,AIFA,Pto. Vallarta,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2022,Diciembre,12,Salida,AIFA,Pto. Vallarta,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Pto. Vallarta,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,La Paz,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,La Paz,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,La Paz,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
-2023,Diciembre,12,Salida,AIFA,La Paz,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2022,Diciembre,12,Salida,AIFA,La Paz,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,La Paz,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Los Cabos,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Los Cabos,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Los Cabos,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
-2023,Diciembre,12,Salida,AIFA,Los Cabos,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2022,Diciembre,12,Salida,AIFA,Los Cabos,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Los Cabos,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Oaxaca,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Oaxaca,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Oaxaca,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
-2023,Diciembre,12,Salida,AIFA,Oaxaca,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2022,Diciembre,12,Salida,AIFA,Oaxaca,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Oaxaca,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Pto. Escondido,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Salida,AIFA,Pto. Escondido,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Salida,AIFA,Pto. Escondido,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
-2023,Diciembre,12,Salida,AIFA,Pto. Escondido,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2022,Diciembre,12,Salida,AIFA,Pto. Escondido,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Salida,AIFA,Pto. Escondido,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Marzo,3,Llegada,Cancún,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Abril,4,Llegada,Cancún,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Mayo,5,Llegada,Cancún,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
@@ -248,6 +289,7 @@ año,mes,mes_numero,tipo,origen,destino,compañia,tipo_avion,capacidad,fuente
 2022,Octubre,10,Llegada,Cancún,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Cancún,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Cancún,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Cancún,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Marzo,3,Llegada,Tijuana,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Abril,4,Llegada,Tijuana,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Mayo,5,Llegada,Tijuana,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
@@ -258,58 +300,72 @@ año,mes,mes_numero,tipo,origen,destino,compañia,tipo_avion,capacidad,fuente
 2022,Octubre,10,Llegada,Tijuana,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Tijuana,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Tijuana,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Tijuana,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Agosto,8,Llegada,Huatulco,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,Huatulco,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Huatulco,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Huatulco,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Huatulco,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Huatulco,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Agosto,8,Llegada,Mérida,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,Mérida,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Mérida,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Mérida,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Mérida,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Mérida,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Agosto,8,Llegada,Mexicali,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,Mexicali,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Mexicali,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Mexicali,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Mexicali,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Mexicali,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,Guadalajara,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Guadalajara,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Guadalajara,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Guadalajara,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Guadalajara,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,Pto. Vallarta,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Pto. Vallarta,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Pto. Vallarta,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Pto. Vallarta,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Pto. Vallarta,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,La Paz,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,La Paz,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,La Paz,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,La Paz,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,La Paz,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,Los Cabos,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Los Cabos,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Los Cabos,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Los Cabos,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Los Cabos,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,Oaxaca,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Oaxaca,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Oaxaca,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Oaxaca,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Oaxaca,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Llegada,Pto. Escondido,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Octubre,10,Llegada,Pto. Escondido,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Noviembre,11,Llegada,Pto. Escondido,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Diciembre,12,Llegada,Pto. Escondido,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
+2023,Enero,1,Llegada,Pto. Escondido,AIFA,Volaris,A320 y A320neo,180,https://www.seatguru.com/airlines/Viva_Aerobus/Viva_Aerobus_Airbus_A320.php
 2022,Septiembre,9,Salida,AIFA,Panama,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
 2022,Octubre,10,Salida,AIFA,Panama,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
 2022,Noviembre,11,Salida,AIFA,Panama,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
-2023,Diciembre,12,Salida,AIFA,Panama,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
+2022,Diciembre,12,Salida,AIFA,Panama,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
+2023,Enero,1,Salida,AIFA,Panama,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
 2022,Septiembre,9,Llegada,Panama,AIFA,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
 2022,Octubre,10,Llegada,Panama,AIFA,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
 2022,Noviembre,11,Llegada,Panama,AIFA,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
 2022,Diciembre,12,Llegada,Panama,AIFA,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
+2023,Enero,1,Llegada,Panama,AIFA,Copa Airlines,B737-800,157,https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800.php y https://www.seatguru.com/airlines/Copa_Airlines/Copa_Airlines_Boeing_737-800_C.php
 2022,Septiembre,9,Salida,AIFA,"Santo Domingo,Rep Dom",Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
 2022,Octubre,10,Salida,AIFA,"Santo Domingo,Rep Dom",Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
 2022,Noviembre,11,Salida,AIFA,"Santo Domingo,Rep Dom",Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
-2023,Diciembre,12,Salida,AIFA,"Santo Domingo,Rep Dom",Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
+2022,Diciembre,12,Salida,AIFA,"Santo Domingo,Rep Dom",Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
+2023,Enero,1,Salida,AIFA,"Santo Domingo,Rep Dom",Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
 2022,Septiembre,9,Llegada,"Santo Domingo,Rep Dom",AIFA,Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
 2022,Octubre,10,Llegada,"Santo Domingo,Rep Dom",AIFA,Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
 2022,Noviembre,11,Llegada,"Santo Domingo,Rep Dom",AIFA,Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
 2022,Diciembre,12,Llegada,"Santo Domingo,Rep Dom",AIFA,Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
+2023,Enero,1,Llegada,"Santo Domingo,Rep Dom",AIFA,Arajet,B737-800,165,https://www.seatguru.com/airlines/GOL/GOL_Boeing_737_MAX_8_V1.php y https://www.seatguru.com/airlines/GOL/GOL_Boeing_737-700.php
