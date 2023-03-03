@@ -2,10 +2,10 @@
 source("02_codigo/00_paquetes_setup_tema.R") 
 
 ### Importar y procesar las bases de datos ----
-source("02_codigo/01_importar_preparar_bd.R") 
+source("02_codigo/01_b_importar_preparar_bd_acumulada.R") 
 
 ### Definir fecha de corte que irá en el nombre de las gráficas ----
-fecha_corte_grafica <- str_replace_all(Sys.Date() - 1, "-", "")
+fecha_corte_grafica <- str_replace_all(Sys.Date() - 4, "-", "")
 
 fecha_corte_grafica
 
@@ -41,13 +41,19 @@ bd_g_1  %>%
   ungroup() %>% 
   print(n = Inf)
 
-# Promedio semanal de operaciones diarias
+# Promedio semanal de operaciones semanales
 bd_g_1  %>% 
   group_by(semana) %>% 
   summarise(media_operaciones = mean(num_operaciones)) %>%
   ungroup() %>% 
   print(n = Inf)
 
+# Operaciones diarias
+bd_g_1  %>% 
+  filter(fecha >= "2023-02-01") %>% 
+  summarise(minimo =  min(num_operaciones),
+            maximo =  max(num_operaciones))
+  
 
 # Gráfica
 bd_g_1 %>%
@@ -58,15 +64,15 @@ bd_g_1 %>%
   annotate(geom = "rect", xmin = as_date("2022-08-01") - 0.5, xmax = as_date("2022-08-31") + 0.5, ymin = 0, ymax = Inf, fill = "grey70", alpha = 0.3) +
   annotate(geom = "rect", xmin = as_date("2022-10-01") - 0.5, xmax = as_date("2022-10-31") + 0.5, ymin = 0, ymax = Inf, fill = "grey70", alpha = 0.3) +
   annotate(geom = "rect", xmin = as_date("2022-12-01") - 0.5, xmax = as_date("2022-12-31") + 0.5, ymin = 0, ymax = Inf, fill = "grey70", alpha = 0.3) +
-  annotate(geom = "rect", xmin = as_date("2023-02-01") - 0.5, xmax = as_date("2023-02-05") + 0.5, ymin = 0, ymax = Inf, fill = "grey70", alpha = 0.3) +
+  annotate(geom = "rect", xmin = as_date("2023-02-01") - 0.5, xmax = as_date("2023-02-26") + 0.5, ymin = 0, ymax = Inf, fill = "grey70", alpha = 0.3) +
   geom_col(fill = "#b5261e") +
   # geom_text(aes(label = num_operaciones), color = "white", vjust = 1.5, size = 3.5, fontface = "bold") +
   geom_hline(yintercept = 60, color = "steelblue") +
   geom_hline(yintercept = 120, color = "salmon") +
-  annotate(geom = "text", x = max(bd_g_1$fecha) - ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.455), y = 105, label = "De acuerdo con el General Isidoro Pastor, para que el AIFA\nllegue a su punto de equilibrio debe tener 120 operaciones\ndiarias. Estima que esto ocurra en 2025 o 2026.",  family = "Roboto", fontface = "bold", hjust = 0, size = 6, color = "grey30", lineheight = 1) +
-  annotate(geom = "text", x = min(bd_g_1$fecha) + ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.5), y = 70, label = "El objetivo del primero año es atender 2.4 millones de pasajeros.\nSe deben realizar 60 operaciones diarias para lograrlo.",  family = "Roboto", fontface = "bold", hjust = 1, size = 6, color = "grey30", lineheight = 1) +
+  annotate(geom = "text", x = max(bd_g_1$fecha) - ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.445), y = 105, label = "De acuerdo con el General Isidoro Pastor, para que el AIFA\nllegue a su punto de equilibrio debe tener 120 operaciones\ndiarias. Estima que esto ocurra en 2025 o 2026.",  family = "Roboto", fontface = "bold", hjust = 0, size = 6, color = "grey30", lineheight = 1) +
+  annotate(geom = "text", x = min(bd_g_1$fecha) + ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.485), y = 70, label = "El objetivo del primero año es atender 2.4 millones de pasajeros.\nSe deben realizar 60 operaciones diarias para lograrlo.",  family = "Roboto", fontface = "bold", hjust = 1, size = 6, color = "grey30", lineheight = 1) +
   # Etiqueta marzo
-  annotate(geom = "text", x = as_date("2022-03-25") + 0.5, y = 35, label = "MAR.\n2022",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "grey70", lineheight = 0.8) +
+  annotate(geom = "text", x = as_date("2022-03-25") + 0.5, y = 35, label = "MAR.\n2022",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 4, color = "grey70", lineheight = 0.8) +
   # Etiqueta abril
   annotate(geom = "text", x = as_date("2022-04-15") + 0.5, y = 35, label = "ABRIL",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "white", lineheight = 1) +
   # Etiqueta mayo
@@ -78,19 +84,21 @@ bd_g_1 %>%
   # Etiqueta agosto
   annotate(geom = "text", x = as_date("2022-08-15") + 0.5, y = 35, label = "AGOSTO",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "white", lineheight = 1) +
   # Etiqueta septiembre
-  annotate(geom = "text", x = as_date("2022-09-15") + 0.8, y = 75, label = "SEPTIEMBRE",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "grey70", lineheight = 1) +
+  annotate(geom = "text", x = as_date("2022-09-15") + 0.8, y = 85, label = "SEPTIEMBRE",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "grey70", lineheight = 1) +
   # Etiqueta diciembre
-  annotate(geom = "text", x = as_date("2022-10-15") + 0.5, y = 75, label = "OCTUBRE",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "white", lineheight = 1) +
+  annotate(geom = "text", x = as_date("2022-10-15") + 0.5, y = 85, label = "OCTUBRE",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "white", lineheight = 1) +
   # Etiqueta diciembre
-  annotate(geom = "text", x = as_date("2022-11-14") + 0.8, y = 75, label = "NOVIEMBRE",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "grey70", lineheight = 1) +
+  annotate(geom = "text", x = as_date("2022-11-14") + 0.8, y = 85, label = "NOVIEMBRE",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "grey70", lineheight = 1) +
   # Etiqueta diciembre
-  annotate(geom = "text", x = as_date("2022-12-15") + 0.8, y = 75, label = "DICIEMBRE",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "white", lineheight = 1) +
-  # Etiqueta enero
-  annotate(geom = "text", x = as_date("2023-01-16") + 0.8, y = 75, label = "ENERO\n2023",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "grey70", lineheight = 0.8) +
-  annotate(geom = "curve", x = max(bd_g_1$fecha) - ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.03), y = 107, xend = max(bd_g_1$fecha) - ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.006), yend = 118, curvature = 0.5, arrow = arrow(length = unit(0.03, "npc")), size = 1, color = "grey50") +
-  annotate(geom = "curve", x = min(bd_g_1$fecha) + ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.03), y = 73, xend = min(bd_g_1$fecha) + ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.006), yend = 62, arrow = arrow(length = unit(0.03, "npc")), size = 1, color = "grey50") +
+  annotate(geom = "text", x = as_date("2022-12-15") + 0.8, y = 85, label = "DICIEMBRE",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "white", lineheight = 1) +
+  # Etiqueta enero 2023
+  annotate(geom = "text", x = as_date("2023-01-16") + 0.8, y = 85, label = "ENERO\n2023",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "grey70", lineheight = 0.8) +
+  # Etiqueta febrero 2023
+  annotate(geom = "text", x = as_date("2023-02-13") + 0.8, y = 85, label = "FEBRERO",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 5, color = "white", lineheight = 1) +
+  annotate(geom = "curve", x = max(bd_g_1$fecha) - ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.03), y = 107, xend = max(bd_g_1$fecha) - ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.006), yend = 118, curvature = 0.5, arrow = arrow(length = unit(0.03, "npc")), linewidth = 1, color = "grey50") +
+  annotate(geom = "curve", x = min(bd_g_1$fecha) + ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.03), y = 73, xend = min(bd_g_1$fecha) + ((max(bd_g_1$fecha) - min(bd_g_1$fecha)) * 0.006), yend = 62, arrow = arrow(length = unit(0.03, "npc")), linewidth = 1, color = "grey50") +
   scale_x_date(expand = c(0, 0), 
-               date_labels = "%b-%d", 
+               date_labels = "%b", 
                breaks = c(as_date("2022-03-21"), as_date("2022-04-01"), as_date("2022-04-01"), as_date("2022-05-01"), as_date("2022-06-01"), as_date("2022-07-01"), as_date("2022-08-01"), as_date("2022-09-01"), as_date("2022-10-01"), as_date("2022-11-01"), as_date("2022-12-01"), as_date("2023-01-01"), as_date("2023-02-01")
                           # max(bd_g_1$fecha)
                           ), 
@@ -128,18 +136,26 @@ resumen_mes_aifa
 
 bd_g_2 <- 
   bd_aifa %>% 
-  filter(mes_numero > 2 & mes_numero <= 12) %>% 
   mutate(ruta = str_c("AIFA-", aeropuerto),
          ruta = case_when(ruta == "AIFA-Santo Domingo,Rep Dom" ~ "AIFA-Sto. Domingo", 
                           ruta == "AIFA-Panama" ~ "AIFA-Panamá", 
                           T ~ ruta),
-         ruta = fct_relevel(ruta, "AIFA-Tijuana", "AIFA-La Paz", "AIFA-Los Cabos", "AIFA-Mexicali", "AIFA-Cancún", "AIFA-Pto. Escondido", "AIFA-Mérida", "AIFA-Monterrey", "AIFA-Huatulco", "AIFA-Sto. Domingo", "AIFA-Panamá", "AIFA-Guadalajara", "AIFA-Pto. Vallarta", "AIFA-Oaxaca", "AIFA-Acapulco", "AIFA-Veracruz", "AIFA-La Habana", "AIFA-Villahermosa"),
+         ruta = fct_relevel(ruta, "AIFA-Tijuana", "AIFA-Los Cabos", 
+                            "AIFA-La Paz", "AIFA-Pto. Escondido", 
+                            "AIFA-Mexicali", "AIFA-Panamá", 
+                            "AIFA-Cancún",  
+                            "AIFA-Huatulco", "AIFA-Mérida", 
+                            "AIFA-Sto. Domingo", "AIFA-Acapulco", 
+                            "AIFA-Pto. Vallarta", 
+                            "AIFA-Monterrey", "AIFA-Oaxaca", 
+                            "AIFA-Veracruz", "AIFA-Guadalajara", 
+                            "AIFA-La Habana", "AIFA-Villahermosa"),
          tipo = fct_relevel(tipo, "Salidas", "Llegadas")) 
 
 # Análisis diversos
 bd_g_2_analisis <- 
   bd_g_2 %>% 
-  arrange(aeropuerto, tipo, mes) %>% 
+  arrange(aeropuerto, tipo, fecha) %>% 
   mutate(media_pasajeros_x_vuelo = n_pasajeros/n_vuelos,
          # Media del porcentaje de ocupación. Solo para el AIFA 
          media_por_ocupacion = media_pasajeros_x_vuelo/capacidad_media_ruta*100) 
@@ -147,32 +163,32 @@ bd_g_2_analisis <-
 # Cambio en puntos porcentuales
 bd_g_2_analisis %>%
   select(-c(7, 8, 10)) %>%
-  arrange(aeropuerto, tipo, mes_numero) %>% 
+  arrange(aeropuerto, tipo, fecha) %>% 
   group_by(aeropuerto, tipo) %>%
   mutate(cambio = media_por_ocupacion - lag(media_por_ocupacion)) %>% 
   ungroup() %>% 
-  filter(str_detect(mes, "Dic")) %>% 
+  filter(fecha == max(fecha)) %>% 
   # arrange(-cambio) %>% 
   print(n= Inf)
 
 # Número de direcciones en las que el cambio fue positivo
 bd_g_2_analisis %>%
   select(-c(7, 8, 10)) %>%
-  arrange(aeropuerto, tipo, mes_numero) %>% 
+  arrange(aeropuerto, tipo, fecha) %>% 
   group_by(aeropuerto, tipo) %>%
   mutate(cambio = media_por_ocupacion - lag(media_por_ocupacion)) %>% 
   ungroup() %>% 
-  filter(str_detect(mes, "Dic"),
+  filter(fecha == max(fecha),
          cambio > 0) %>% 
   count(aeropuerto, sort = T)
 
 bd_g_2_analisis %>%
   select(-c(7, 8, 10)) %>%
-  arrange(aeropuerto, tipo, mes_numero) %>% 
+  arrange(aeropuerto, tipo, fecha) %>% 
   group_by(aeropuerto, tipo) %>%
   mutate(cambio = media_por_ocupacion - lag(media_por_ocupacion)) %>% 
   ungroup() %>% 
-  filter(str_detect(mes, "Dic"),
+  filter(fecha == max(fecha),
          cambio > 0) %>% 
   arrange(-cambio) %>%
   print(n= Inf)
@@ -180,51 +196,100 @@ bd_g_2_analisis %>%
 # Número de direcciones en las que el cambio fue negativo
 bd_g_2_analisis %>%
   select(-c(7, 8, 10)) %>%
-  arrange(aeropuerto, tipo, mes_numero) %>% 
+  arrange(aeropuerto, tipo, fecha) %>% 
   group_by(aeropuerto, tipo) %>%
   mutate(cambio = media_por_ocupacion - lag(media_por_ocupacion)) %>% 
   ungroup() %>% 
-  filter(str_detect(mes, "Dic"),
+  filter(fecha == max(fecha),
          cambio < 0) %>% 
   count(aeropuerto, sort = T)
 
 bd_g_2_analisis %>%
   select(-c(7, 8, 10)) %>%
-  arrange(aeropuerto, tipo, mes_numero) %>% 
+  arrange(aeropuerto, tipo, fecha) %>% 
   group_by(aeropuerto, tipo) %>%
   mutate(cambio = media_por_ocupacion - lag(media_por_ocupacion)) %>% 
   ungroup() %>% 
-  filter(str_detect(mes, "Dic"),
+  filter(fecha == max(fecha),
          cambio < 0) %>% 
   arrange(-cambio) %>%
   print(n= Inf)
 
+bd_g_2_analisis %>%
+  select(-c(7, 8, 10)) %>%
+  arrange(aeropuerto, tipo, fecha) %>% 
+  group_by(aeropuerto, tipo) %>%
+  mutate(cambio = media_por_ocupacion - lag(media_por_ocupacion)) %>% 
+  ungroup() %>% 
+  filter(fecha == max(fecha),
+         cambio < 0) %>% 
+  arrange(aeropuerto) %>%
+  print(n= Inf)
+
 # Mantener sólo observaciones del último mes
 bd_g_2_analisis %>%
-  filter(str_detect(mes, "Nov|Dic")) %>% 
+  filter(fecha == max(fecha)) %>% 
   select(-c(7, 8, 10)) %>% 
-  arrange(aeropuerto, tipo, mes_numero) %>% 
+  arrange(aeropuerto, tipo) %>% 
+  print(n= Inf)
+
+bd_g_2_analisis %>%
+  filter(fecha == max(fecha)) %>% 
+  select(-c(7, 8, 10)) %>% 
+  arrange(-media_por_ocupacion) %>% 
   print(n= Inf)
 
 # Contar en cuantas rutas media_por_ocupacion > 80, por sentido del vuelo
-bd_g_2_analisis %>%
-  filter(str_detect(mes, "Dic")) %>% 
+mas_de_80_por <- 
+  bd_g_2_analisis %>%
+  filter(fecha == max(fecha)) %>% 
   select(-c(7, 8, 10)) %>% 
   arrange(aeropuerto, tipo, mes_numero) %>% 
   filter(media_por_ocupacion > 80) %>% 
-  count(aeropuerto, sort = T)
+  count(aeropuerto, sort = T) %>% 
+  pull(var = aeropuerto)
+
+mas_de_80_por
+
+bd_g_2_analisis %>%
+  filter(fecha == max(fecha),
+         aeropuerto %in% mas_de_80_por,
+         media_por_ocupacion >= 80) %>% 
+  select(-c(7, 8, 10)) %>% 
+  arrange(-media_por_ocupacion) %>% 
+  print(n= Inf)
 
 # Contar en cuantas rutas media_por_ocupacion > 50 & media_por_ocupacion < 80, por sentido del vuelo
-bd_g_2_analisis %>%
-  filter(str_detect(mes, "Dic")) %>% 
+entre_50_y_80_por <- 
+  bd_g_2_analisis %>%
+  filter(fecha == max(fecha)) %>% 
   select(-c(7, 8, 10)) %>% 
   arrange(aeropuerto, tipo, mes_numero) %>% 
   filter(media_por_ocupacion > 50 & media_por_ocupacion < 80) %>% 
-  count(aeropuerto, sort = T)
+  count(aeropuerto, sort = T) %>% 
+  pull(var = aeropuerto)
+
+entre_50_y_80_por
+
+bd_g_2_analisis %>%
+  filter(fecha == max(fecha),
+         aeropuerto %in% entre_50_y_80_por & !aeropuerto %in% mas_de_80_por,
+         media_por_ocupacion >= 50 & media_por_ocupacion < 80) %>% 
+  select(-c(7, 8, 10)) %>% 
+  arrange(-media_por_ocupacion) %>% 
+  print(n= Inf)
+
+bd_g_2_analisis %>%
+  filter(fecha == max(fecha),
+         aeropuerto %in% entre_50_y_80_por & !aeropuerto %in% mas_de_80_por,
+         media_por_ocupacion >= 50 & media_por_ocupacion < 80) %>% 
+  select(-c(7, 8, 10)) %>% 
+  arrange(aeropuerto, -media_por_ocupacion) %>% 
+  print(n= Inf)
 
 # Contar en cuantas rutas media_por_ocupacion < 50, por sentido del vuelo
 bd_g_2_analisis %>%
-  filter(str_detect(mes, "Dic")) %>% 
+  filter(fecha == max(fecha)) %>% 
   select(-c(7, 8, 10)) %>% 
   arrange(aeropuerto, tipo, mes_numero) %>% 
   filter(media_por_ocupacion <= 50) %>% 
@@ -239,7 +304,7 @@ bd_g_2_analisis %>%
 
 
 bd_g_2_analisis %>%
-  filter(str_detect(mes, "Dic")) %>% 
+  filter(str_detect(mes, "Ene")) %>% 
   group_by(aeropuerto) %>% 
   summarise(tot_pasajeros = sum(x = n_pasajeros)) %>% 
   ungroup() %>% 
@@ -254,36 +319,27 @@ bd_g_2 %>%
   mutate(media_pasajeros_x_vuelo = n_pasajeros/n_vuelos,
          # Media del porcentaje de ocupación. Solo para el AIFA 
          media_por_ocupacion = media_pasajeros_x_vuelo/capacidad_media_ruta*100) %>%
-  mutate(mes_breve = case_when(mes == "Enero" ~ "Ene.",
-                               mes == "Febrero" ~ "Feb.",
-                               mes == "Marzo" ~ "Mar.*",
-                               mes == "Abril" ~ "Abr.",
-                               mes == "Mayo" ~ "May.",
-                               mes == "Junio" ~ "Jun.",
-                               mes == "Julio" ~ "Jul.",
-                               mes == "Agosto" ~ "Ago.",
-                               mes == "Septiembre" ~ "Sep.",
-                               mes == "Octubre" ~ "Oct.",
-                               mes == "Noviembre" ~ "Nov.",
-                               mes == "Diciembre" ~ "Dic.",
-                               T ~ mes),
-         # mes = ifelse(mes == "Marzo", str_c(mes, "*"), mes),
-         mes_breve = fct_reorder(mes_breve, mes_numero)) %>% 
-  ggplot(aes(x = mes_breve,
+  ggplot(aes(x = fecha,
              y = media_por_ocupacion/100,
              color = tipo,
              group = tipo)) +
+  geom_vline(xintercept = as_date("2022-12-16"), color = "grey90") +
+  # Etiqueta 2022
+  annotate(geom = "text", x = as_date("2022-11-25"), y = 0.02, label = "\'22",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 3, color = "grey50", lineheight = 0.8) +
+  # Etiqueta 2023
+  annotate(geom = "text", x = as_date("2023-01-05"), y = 0.02, label = "\'23",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 3, color = "grey50", lineheight = 0.8) +
   geom_hline(yintercept = c(0.50, 0.8), color = "salmon", linetype = 3) +
   geom_point(size = 3) +
   geom_line(size = 1) +
   facet_wrap(~ ruta, ncol = 6) +
+  scale_x_date(breaks = c(as_date("2022-03-01"), as_date("2022-05-01"), as_date("2022-07-01"), as_date("2022-09-01"), as_date("2022-11-01"), as_date("2023-01-01")), date_labels = "%b") +
   scale_y_continuous(labels = percent_format(accuracy = 1, suffix = " %"),
                      limits = c(0, 1.01),
                      breaks = seq(0, 1, .10),
                      sec.axis = dup_axis()) +
   scale_color_manual(values = c("#b5261e", "steelblue", "grey70")) +
   labs(title = "Porcentaje de ocupación mensual en las rutas operadas desde y hacia el AIFA",
-       subtitle = "Información a diciembre de 2022",
+       subtitle = "Información a enero de 2023",
        x = NULL,
        y = NULL,
        caption = "\n\nElaborado por @segasi / Datos: Estadística operacional origen-destino, AFAC, bit.ly/3CXb7UG.\nNotas: Los resultados fueron calculados a partir de la información correspondiente a los vuelos clasificados como de \"servicio regular nacional\" que salieron o llegaron a cada\n aeropuerto. *Las cifras de marzo corresponden al período del 21 al 31 de dicho mes.",
@@ -302,6 +358,27 @@ bd_g_2 %>%
 ggsave(str_c("03_vis/graficas_", fecha_corte_grafica, "/02_porcentaje_ocupacion_mensual_por_ruta_aifa_",fecha_corte_grafica, ".png"), dpi = 200, width = 17, height = 14)
 
 
+## Cálculos para descripción después de esta gráfica 
+
+# Pasajeros atendidos en vuelos internacionales 
+bd_aifa %>% 
+  filter(fecha == max(x = fecha),
+         aeropuerto %in% c("La Habana", "Panama", "Santo Domingo,Rep Dom")) %>% 
+  summarise(tot_pasajeros = sum(n_pasajeros))
+
+
+# Cambio mensual en el número de pasajeros atendidos en los últimos dos meses 
+bd_operaciones_todos %>% 
+  filter(fecha >= "2022-12-01") %>% 
+  summarise(tot_pasajeros = sum(x = n_pasajeros),
+            .by =  c(fecha, apto_interes)) %>% 
+  mutate(cambio = (tot_pasajeros - lag(tot_pasajeros))/lag(tot_pasajeros)*100,
+         .by =  apto_interes) %>% 
+  filter(!is.na(cambio)) %>% 
+  arrange(cambio) %>% 
+  print(n = Inf)
+
+
 ### Gráfica 3: Promedio diario de operaciones aéreas realizadas y pasajeros atendidos en cada aeropuerto de México en ___ de 2022 ---- 
 
 # Preparar tibble
@@ -310,7 +387,7 @@ dias_en_el_mes <- 31
 
 bd_g_3 <- 
   bd_operaciones_todos %>% 
-  filter(mes == "Diciembre") %>% 
+  filter(fecha == "2023-01-01") %>% 
   group_by(apto_interes) %>% 
   summarise(n_vuelos_mes = sum(n_vuelos),
             n_pasajeros_mes = sum(n_pasajeros),
@@ -415,7 +492,7 @@ g_3_b <-
   # scale_x_log10(labels = comma) +
   scale_x_continuous(expand = c(0, 0),
                      breaks = c(seq(0, 125e3, 25e3)),
-                     limits = c(-1, max(bd_g_3$media_diaria_pasajeros/1)*1.01),
+                     limits = c(-1, max(bd_g_3$media_diaria_pasajeros/1)*1.05),
                      labels = comma) +
   scale_fill_identity() +
   labs(title = "Pasajeros atendidos",
@@ -427,7 +504,7 @@ g_3_b <-
 titulo_gral <- 
   ggdraw() + 
   draw_label(
-    "Promedio diario de operaciones aéreas realizadas y pasajeros\natendidos en cada aeropuerto de México en diciembre de 2022", fontfamily = "Roboto Black", color = "grey25", size = 40, fontface = 'bold', x = 0, hjust = 0) +
+    "Promedio diario de operaciones aéreas realizadas y pasajeros\natendidos en cada aeropuerto de México en enero de 2023", fontfamily = "Roboto Black", color = "grey25", size = 40, fontface = 'bold', x = 0, hjust = 0) +
   theme(plot.background = element_rect(fill = "white", color = "white"),
         plot.margin = margin(0, 0, 0, 7))
 
@@ -454,12 +531,12 @@ ggsave("03_vis/promedio_diario_operaciones_y_pasajeros_x_aeropuerto_ultimo_mes_.
 bd_g_4_5_6 <- 
   bd_operaciones_todos %>% 
   filter(apto_interes %in% c("AIFA", "AICM", "Toluca")) %>% 
-  group_by(apto_interes, mes, mes_numero) %>% 
+  group_by(apto_interes, fecha) %>% 
   summarise(n_vuelos_mes = sum(n_vuelos),
             n_pasajeros_mes = sum(n_pasajeros),
             kg_carga_mes = sum(kg_carga)) %>% 
   ungroup() %>% 
-  group_by(mes) %>% 
+  group_by(fecha) %>% 
   mutate(por_vuelos = n_vuelos_mes/sum(n_vuelos_mes),
          por_pasajeros = n_pasajeros_mes/sum(n_pasajeros_mes),
          apto_interes = fct_rev(fct_relevel(apto_interes, "AICM", "Toluca", "AIFA"))) %>%
@@ -467,44 +544,71 @@ bd_g_4_5_6 <-
 
 # Analizar cifras de últimos tres meses ----
 bd_g_4_5_6 %>% 
-  filter(between(x = mes_numero, left = 5, right = 12)) %>% 
+  filter(fecha >= as_date("2022-11-01")) %>% 
+  arrange(apto_interes)  
+
+
+bd_g_4_5_6 %>% 
+  filter(fecha >= as_date("2022-11-01")) %>% 
   arrange(apto_interes) %>% 
-  group_by(mes) %>% 
-  mutate(tot_vuelos_mes = sum(n_vuelos_mes)) %>% 
-  ungroup() %>% 
+  mutate(tot_vuelos_mes = sum(n_vuelos_mes),
+         .by = fecha) %>%
+  filter(apto_interes == "AICM")
+
+bd_g_4_5_6 %>% 
+  filter(fecha >= as_date("2022-11-01")) %>% 
+  arrange(apto_interes) %>% 
+  mutate(tot_vuelos_mes = sum(n_vuelos_mes),
+         .by = fecha) %>% 
   filter(apto_interes == "AIFA")
 
 bd_g_4_5_6 %>% 
-  filter(between(x = mes_numero, left = 5, right = 12)) %>% 
+  filter(fecha >= as_date("2022-11-01")) %>% 
   arrange(apto_interes) %>% 
-  group_by(mes) %>% 
-  mutate(tot_vuelos_mes = sum(n_vuelos_mes)) %>% 
-  ungroup() %>% 
+  mutate(tot_vuelos_mes = sum(n_vuelos_mes),
+         .by = fecha) %>%
   filter(apto_interes == "Toluca")
-  
+
+
+bd_g_4_5_6 %>%
+  filter(fecha >= as_date("2023-01-01"))
+
 
 bd_g_4_5_6 %>% 
-  filter(between(x = mes_numero, left = 12, right = 12))
+  summarise(tot_vuelos = sum(n_vuelos_mes),
+            tot_pasajeros = sum(n_pasajeros_mes),
+            .by = fecha) 
 
-### Cifra de pasajeros y operaciones agregadas por mes ----
 bd_g_4_5_6 %>% 
-  group_by(mes) %>% 
+  summarise(tot_vuelos = sum(n_vuelos_mes),
+            tot_pasajeros = sum(n_pasajeros_mes),
+            .by = fecha) %>% 
+  arrange(-tot_vuelos)
+  arrange(tot_pasajeros)
+
+## Cifra de pasajeros y operaciones agregadas por mes ----
+bd_g_4_5_6 %>% 
   summarise(tot_vuelos_mes = sum(x = n_vuelos_mes),
-            tot_pasajeros_mes = sum(x = n_pasajeros_mes)) %>% 
-  ungroup()
+            tot_pasajeros_mes = sum(x = n_pasajeros_mes),
+            .by = fecha)
 
 
 
 # Hacer gráfica 4 ----
 
 bd_g_4_5_6 %>% 
-  ggplot(aes(x = mes,
+  ggplot(aes(x = fecha,
              y = n_vuelos_mes,
              fill = apto_interes)) +
   geom_col() +
   geom_hline(yintercept = seq(0, 35000, 5000), linetype = 3, size = 0.2, color = "white") +
-  scale_x_discrete(expand = c(0, 0)) +
-  scale_y_continuous(expand = c(0, 0), limits = c(0, 35000) , breaks = seq(0, 35000, 5000), sec.axis = dup_axis(), labels = comma_format(big.mark = " ")) +
+  geom_vline(xintercept = as_date("2022-12-16") + 0.5, color = "grey80") +
+  # Etiqueta 2022
+  annotate(geom = "text", x = as_date("2022-12-01"), y = 35000, label = "2022",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 9, color = "grey70", lineheight = 0.8) +
+  # Etiqueta 2023
+  annotate(geom = "text", x = as_date("2023-01-01"), y = 35000, label = "2023",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 9, color = "grey70", lineheight = 0.8) +
+  scale_x_date(breaks = seq.Date(from = as_date("2022-01-01"), to = max(bd_g_4_5_6$fecha), by = "1 month"), date_labels = "%b") +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 36000) , breaks = seq(0, 35000, 5000), sec.axis = dup_axis(), labels = comma_format(big.mark = " ")) +
   scale_fill_manual(values = c("#b5261e", "steelblue", "grey70")) +
   labs(title = "Número de operaciones aéreas realizadas mensualmente en los aeropuertos\nde la Cd. de México, Toluca y Felipe Ángeles, respecto al total de operaciones\nefectuadas cada mes en el Sistema Aeroportuario Metropolitano (SAM)",
        subtitle = "",
@@ -519,23 +623,28 @@ bd_g_4_5_6 %>%
         panel.grid.major.x = element_blank(),
         axis.text.x = element_text(size = 18),
         axis.text.y = element_text(size = 18),
-        legend.position = c(0.88, 1.06),
+        legend.position = c(0.148, 1),
         legend.direction = "horizontal",
         legend.text = element_text(size = 22)) 
 
-ggsave(str_c("03_vis/graficas_", fecha_corte_grafica, "/04_numero_operaciones_x_aeropuertos_sma_", fecha_corte_grafica, ".png"), dpi = 200, width = 19, height = 12)
+ggsave(str_c("03_vis/graficas_", fecha_corte_grafica, "/04_numero_operaciones_x_aeropuertos_sma_", fecha_corte_grafica, ".png"), dpi = 200, width = 19, height = 13)
 
 
 
 ## Gráfica 5: % de operaciones aéreas realizadas mensualmente desde/hacia el AICM, AIFA y TLC ----
 bd_g_4_5_6 %>% 
-  ggplot(aes(x = mes,
+  ggplot(aes(x = fecha,
              y = por_vuelos,
              fill = apto_interes)) +
   geom_col() +
   geom_hline(yintercept = seq(0.1, 0.90, 0.10), linetype = 3, size = 0.2, color = "white") +
-  scale_x_discrete(expand = c(0, 0)) +
-  scale_y_continuous(expand = c(0, 0), limits = c(-0.01, 1,01), breaks = seq(0, 1, 0.1), sec.axis = dup_axis(), labels = percent_format(accuracy = 1, suffix = " %")) +
+  geom_vline(xintercept = as_date("2022-12-16") + 0.5, color = "grey80") +
+  # Etiqueta 2022
+  annotate(geom = "text", x = as_date("2022-12-01"), y = 1.04, label = "2022",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 9, color = "grey70", lineheight = 0.8) +
+  # Etiqueta 2023
+  annotate(geom = "text", x = as_date("2023-01-01"), y = 1.04, label = "2023",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 9, color = "grey70", lineheight = 0.8) +
+  scale_x_date(breaks = seq.Date(from = as_date("2022-01-01"), to = max(bd_g_4_5_6$fecha), by = "1 month"), date_labels = "%b") +
+  scale_y_continuous(expand = c(0, 0), limits = c(-0.01, 1.06), breaks = seq(0, 1, 0.1), sec.axis = dup_axis(), labels = percent_format(accuracy = 1, suffix = " %")) +
   scale_fill_manual(values = c("#b5261e", "steelblue", "grey70")) +
   labs(title = "Porcentaje de operaciones aéreas realizadas mensualmente en los aeropuertos\nde la Cd. de México, Toluca y Felipe Ángeles, respecto al total de operaciones\nefectuadas cada mes en el Sistema Aeroportuario Metropolitano (SAM)",
        subtitle = "",
@@ -544,27 +653,32 @@ bd_g_4_5_6 %>%
        fill = NULL,
        caption = "<br>Elaborado por @segasi / Datos: AFAC, bit.ly/3CXb7UG<br>Nota: Los porcentajes fueron calculados a partir del número mensual de vuelos clasificados como de \"servicio regular nacional\" que <span style='color:#fa8072;'>salieron</span> o <span style='color:#fa8072;'>llegaron</span> a cada aeropuerto.") +
   tema +
-  theme(plot.title = element_text(size = 37, lineheight = 1),
+  theme(plot.title = element_text(size = 38, lineheight = 1),
         plot.subtitle = element_text(size = 22),
         plot.caption = element_markdown(size = 18, lineheight = 1),
         axis.text.x = element_text(size = 18),
         axis.text.y = element_text(size = 20),
-        legend.position = c(0.88, 1.06),
+        legend.position = c(0.145, 0.99),
         legend.direction = "horizontal",
         legend.text = element_text(size = 22)) 
 
-ggsave(str_c("03_vis/graficas_", fecha_corte_grafica, "/05_porcentaje_operaciones_x_aeropuertos_sma_", fecha_corte_grafica, ".png"), dpi = 200, width = 19, height = 12)
+ggsave(str_c("03_vis/graficas_", fecha_corte_grafica, "/05_porcentaje_operaciones_x_aeropuertos_sma_", fecha_corte_grafica, ".png"), dpi = 200, width = 19, height = 13)
 
 
 ## Gráfica 6: % de pasajeros atendidos mensualmente por el AICM, AIFA y TLC ----
 bd_g_4_5_6 %>% 
-  ggplot(aes(x = mes,
+  ggplot(aes(x = fecha,
              y = por_pasajeros,
              fill = apto_interes)) +
   geom_col() +
   geom_hline(yintercept = seq(0.1, 0.90, 0.10), linetype = 3, size = 0.2, color = "white") +
-  scale_x_discrete(expand = c(0, 0)) +
-  scale_y_continuous(expand = c(0, 0), limits = c(-0.01, 1,01), breaks = seq(0, 1, 0.1), sec.axis = dup_axis(), labels = percent_format(accuracy = 1, suffix = " %")) +
+  geom_vline(xintercept = as_date("2022-12-16") + 0.5, color = "grey80") +
+  # Etiqueta 2022
+  annotate(geom = "text", x = as_date("2022-12-01"), y = 1.04, label = "2022",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 9, color = "grey70", lineheight = 0.8) +
+  # Etiqueta 2023
+  annotate(geom = "text", x = as_date("2023-01-01"), y = 1.04, label = "2023",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 9, color = "grey70", lineheight = 0.8) +
+  scale_x_date(breaks = seq.Date(from = as_date("2022-01-01"), to = max(bd_g_4_5_6$fecha), by = "1 month"), date_labels = "%b") +
+  scale_y_continuous(expand = c(0, 0), limits = c(-0.01, 1.06), breaks = seq(0, 1, 0.1), sec.axis = dup_axis(), labels = percent_format(accuracy = 1, suffix = " %")) +
   scale_fill_manual(values = c("#b5261e", "steelblue", "grey70")) +
   labs(title = "Porcentaje de pasajeros atendidos mensualmente en los aeropuertos de la\nCd. de México, Toluca y Felipe Ángeles, respecto al total de pasajeros\natendidos cada mes en el Sistema Aeroportuario Metropolitano (SAM)",
        subtitle = "",
@@ -573,18 +687,16 @@ bd_g_4_5_6 %>%
        fill = NULL,
        caption = "<br>Elaborado por @segasi / Datos: AFAC, bit.ly/3CXb7UG<br>Nota: Los porcentajes fueron calculados a partir del número mensual de pasajeros que abordaron vuelos clasificados como de \"servicio regular nacional\" que <span style='color:#fa8072;'>salieron</span> o<br><span style='color:#fa8072;'>llegaron</span> a cada aeropuerto.") +
   tema +
-  theme(plot.title = element_text(size = 37, lineheight = 1),
+  theme(plot.title = element_text(size = 38, lineheight = 1),
         plot.subtitle = element_text(size = 22),
         plot.caption = element_markdown(size = 18, lineheight = 1),
         axis.text.x = element_text(size = 18),
         axis.text.y = element_text(size = 20),
-        legend.position = c(0.88, 1.06),
+        legend.position = c(0.145, 0.99),
         legend.direction = "horizontal",
         legend.text = element_text(size = 22)) 
 
-ggsave(str_c("03_vis/graficas_", fecha_corte_grafica, "/06_porcentaje_pasajeros_x_aeropuertos_sma_", fecha_corte_grafica, ".png"), dpi = 200, width = 19, height = 12)
-
-
+ggsave(str_c("03_vis/graficas_", fecha_corte_grafica, "/06_porcentaje_pasajeros_x_aeropuertos_sma_", fecha_corte_grafica, ".png"), dpi = 200, width = 19, height = 13)
 
 
 
@@ -593,37 +705,42 @@ ggsave(str_c("03_vis/graficas_", fecha_corte_grafica, "/06_porcentaje_pasajeros_
 # Esta gráfica fue incluida en el texto a partir de la novena actualización del análisis
 bd_g_7 <- 
   resumen_mes_aifa %>% 
-  mutate(mes = as.character(mes),
-         mes = fct_relevel(mes, "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"),
-         cambio_por_vuelos = (n_vuelos_mes - lag(n_vuelos_mes))/lag(n_vuelos_mes),
+  mutate(cambio_por_vuelos = (n_vuelos_mes - lag(n_vuelos_mes))/lag(n_vuelos_mes),
          cambio_por_pasajeros = (n_pasajeros_mes - lag(n_pasajeros_mes))/lag(n_pasajeros_mes)) %>% 
-  select(mes, mes_numero, contains("cambio")) %>% 
-  filter(mes_numero > 4) %>% 
-  pivot_longer(-c(mes, mes_numero), names_to = "tipo", values_to = "cambio") %>% 
+  select(fecha, mes, mes_numero, contains("cambio")) %>% 
+  pivot_longer(-c(fecha, mes, mes_numero), names_to = "tipo", values_to = "cambio") %>% 
   mutate(tipo = ifelse(str_detect(tipo, "vuelos"), "Operaciones", "Pasajeros"),
          etiqueta = tipo) 
 
 bd_g_7 %>% 
-  ggplot(aes(x = mes,
+  filter(fecha > "2022-04-01") %>% 
+  ggplot(aes(x = fecha,
              y = cambio,
              color = tipo,
              group = tipo)) +
+  geom_vline(xintercept = as_date("2022-12-16"), color = "grey80") +
+  # Etiqueta 2022
+  annotate(geom = "text", x = as_date("2022-12-01"), y = 1.25, label = "2022",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 9, color = "grey70", lineheight = 0.8) +
+  # Etiqueta 2023
+  annotate(geom = "text", x = as_date("2023-01-01"), y = 1.25, label = "2023",  family = "Roboto", fontface = "bold", hjust = 0.5, size = 9, color = "grey70", lineheight = 0.8) +
   geom_hline(yintercept = 0, color = "tomato", linetype = 3) +
   geom_point(size = 6) +
-  geom_textline(aes(label = etiqueta), linewidth = 2, size = 6, hjust = 0.83) +
-  geom_point(.data = bd_g_7 %>% filter(tipo == "Operaciones"),
-             aes(x = mes,
+  geom_textline(aes(label = etiqueta), linewidth = 2, size = 6, hjust = 0.76) +
+  geom_point(data = bd_g_7 %>% filter(tipo == "Operaciones"),
+             aes(x = fecha,
                  y = cambio,
                  color = tipo,
                  group = tipo),
              size = 6) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b", limits = c(as_date("2022-04-29"),
+                                                                       as_date("2023-01-01"))) +
   scale_y_continuous(labels = percent_format(accuracy = 1, suffix = " %"),
                      limits = c(-0.2, 1.3),
                      breaks = seq(-0.3, 1.3, .10),
                      sec.axis = dup_axis()) +
   scale_color_manual(values = c("#b5261e", "steelblue")) +
   labs(title = "Cambio porcentual mensual del número de operaciones y de pasajeros atendidos en\nlas rutas operadas desde y hacia el AIFA",
-       subtitle = "Información a diciembre de 2022",
+       subtitle = "Información a enero de 2023",
        x = NULL,
        y = NULL,
        caption = "\n\nElaborado por @segasi / Datos: Estadística operacional origen-destino, AFAC, bit.ly/3CXb7UG.",
