@@ -25,7 +25,7 @@ bd_orig_dest_2022 <-
 # Fuente: elaboración propia a partir de información publicada por Flight Aware: https://flightaware.com/live/airport/MMSM
 
 bd_aifa_fa <- 
-  read_csv(file = "01_bd/a_partir_de_flight_aware/bd_operaciones_aifa_corte_20230226.csv")
+  read_csv(file = "01_bd/a_partir_de_flight_aware/bd_operaciones_aifa_corte_20230423.csv")
 
 ## Estadística operacional regular por origen-destino ----
 
@@ -33,65 +33,122 @@ bd_aifa_fa <-
 
 # Nota: Sólo considero los datos de operaciones nacionales e internacionales de servicio regular o programado
 
+
 # Vuelos nacionales ----
 
 # Número de vuelos nacionales
 bd_orig_dest_nal_vuelos_w <- 
-  read_excel("01_bd/afac/2023/sase-enero-2023-27022023.xlsx", 
+  read_excel("01_bd/afac/2023/sase-marzo-2023-26042023.xlsx", 
              sheet = 2, 
-             range = "a6:n448") %>% 
+             range = "a6:n457") %>% 
   clean_names() %>% 
   mutate(tipo = "Nacionales - Serv. regular") 
 
 
+bd_orig_dest_nal_vuelos_w %>% 
+  glimpse()
+
+bd_orig_dest_nal_vuelos_w %>% 
+  tail()
+
+bd_orig_dest_nal_vuelos_w %>% 
+  skim()
+
 # Número de pasajeros nacionales
 bd_orig_dest_nal_pasajeros_w <- 
-  read_excel("01_bd/afac/2023/sase-enero-2023-27022023.xlsx", 
+  read_excel("01_bd/afac/2023/sase-marzo-2023-26042023.xlsx", 
              sheet = 2, 
-             range = "a6:aa448") %>% 
+             range = "a6:aa457") %>% 
   clean_names() %>% 
   select(-c(ene_jan_3:total)) %>% 
   mutate(tipo = "Nacionales - Serv. regular") 
 
+
+bd_orig_dest_nal_vuelos_w %>% 
+  glimpse()
+
+bd_orig_dest_nal_vuelos_w %>% 
+  tail()
+
+bd_orig_dest_nal_vuelos_w %>% 
+  skim()
+
+
 # Número de vuelos de carga
 bd_orig_dest_nal_carga_w <- 
-  read_excel("01_bd/afac/2023/sase-enero-2023-27022023.xlsx", 
+  read_excel("01_bd/afac/2023/sase-marzo-2023-26042023.xlsx", 
              sheet = 2, 
-             range = "a6:an448") %>% 
+             range = "a6:an457") %>% 
   clean_names() %>%
   select(-c(ene_jan_3:total_28)) %>%
   mutate(tipo = "Nacionales - Serv. regular") 
+
+
+bd_orig_dest_nal_carga_w %>% 
+  glimpse()
+
+bd_orig_dest_nal_carga_w %>% 
+  tail()
+
+bd_orig_dest_nal_carga_w %>% 
+  skim()
 
 # Vuelos internacionales ----
 
 # Número de vuelos internacionales
 bd_orig_dest_intl_vuelos_w <- 
-  read_excel("01_bd/afac/2023/sase-enero-2023-27022023.xlsx",
+  read_excel("01_bd/afac/2023/sase-marzo-2023-26042023.xlsx",
              sheet = 3, 
-             range = "a6:p753") %>% 
+             range = "a6:p774") %>% 
   clean_names() %>% 
   mutate(tipo = "Internacionales - Serv. regular") 
+
+bd_orig_dest_intl_vuelos_w %>% 
+  glimpse()
+
+bd_orig_dest_intl_vuelos_w %>% 
+  tail()
+
+bd_orig_dest_intl_vuelos_w %>% 
+  skim()
 
 
 # Número de pasajeros internacionales
 bd_orig_dest_intl_pasajeros_w <- 
-  read_excel("01_bd/afac/2023/sase-enero-2023-27022023.xlsx",
+  read_excel("01_bd/afac/2023/sase-marzo-2023-26042023.xlsx",
              sheet = 3, 
-             range = "a6:ac753") %>% 
+             range = "a6:ac774") %>% 
   clean_names() %>% 
   select(-c(ene_jan_5:total)) %>% 
   mutate(tipo = "Internacionales - Serv. regular") 
 
+bd_orig_dest_intl_pasajeros_w %>% 
+  glimpse()
+
+bd_orig_dest_intl_pasajeros_w %>% 
+  tail()
+
+bd_orig_dest_intl_pasajeros_w %>% 
+  skim()
+
+
 # Número de vuelos de carga internacionales
 bd_orig_dest_intl_carga_w <- 
-  read_excel("01_bd/afac/2023/sase-enero-2023-27022023.xlsx",
+  read_excel("01_bd/afac/2023/sase-marzo-2023-26042023.xlsx",
              sheet = 3, 
-             range = "a6:ap753") %>% 
+             range = "a6:ap774") %>% 
   clean_names() %>%
   select(-c(ene_jan_5:total_30)) %>%
   mutate(tipo = "Internacionales - Serv. regular") 
 
+bd_orig_dest_intl_carga_w %>% 
+  glimpse()
 
+bd_orig_dest_intl_carga_w %>% 
+  tail()
+
+bd_orig_dest_intl_carga_w %>% 
+  skim()
 
 
 ## Capacidad de aeronaves que operan desde/hacia el AIFA ----
@@ -101,6 +158,8 @@ bd_orig_dest_intl_carga_w <-
 bd_capacidad_aifa <- 
   read_csv(file = "01_bd/bd_capacidad_aviones_aifa.csv")
 
+bd_capacidad_aifa %>% 
+  tail()
 
 ### Transformar de varias formas a tibbles ----
 

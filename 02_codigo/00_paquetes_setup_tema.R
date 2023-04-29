@@ -1,7 +1,5 @@
 ### Paquetes ----
-pacman::p_load(cowplot, geomtextpath, ggforce, ggmap, ggrepel, ggridges, glue, gpclib, ggtext, Hmisc, janitor, lubridate, RColorBrewer, rcartocolor, readxl, scales, sf, shadowtext, tidyverse,  treemapify, viridis, wesanderson, zoo)
-
-
+pacman::p_load(cowplot, geomtextpath, ggforce, ggmap, ggrepel, ggridges, glue, gpclib, ggtext, Hmisc, janitor, lubridate, RColorBrewer, rcartocolor, readxl, scales, sf, shadowtext, skimr, tidyverse,  treemapify, viridis, wesanderson, zoo)
 
 
 ### Setup general ----
